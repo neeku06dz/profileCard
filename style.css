@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --black: #212121;
+    --white: snow;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/bg-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.top_icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    margin-bottom: 1rem;
+}
+
+.profile h3 {
+    color: green;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile span {
+    color: var(--black);
+}
+
+.active .profile span {
+    color: var(--white);
+}
+
+.profile h5 {
+    color: var(--black);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.active .profile h5 {
+    color: var(--white);
+}
+
+.social_icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3;
+}
+
+.social_icon i {
+    font-size: 1.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    padding: 0.7rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 0.7rem;
+}
+
+.active .social_icon i {
+    background-color: var(--white);
+    color: black;
+    border: 1px solid var(--white);
+}
+
+.social_icon i:hover {
+    background-color: transparent;
+    color: var(--black);
+}
+
+.active .social_icon i:hover {
+    color: var(--white);
+}
+
+.call_sub {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.call {
+    background-color: transparent;
+    padding: 0.5rem 1.7rem;
+    border: 3px solid green;
+    border-radius: 1rem;
+    color: green;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.subscribe {
+    background-color: transparent;
+    padding: 0.5rem 1.7rem;
+    border: 3px solid red;
+    border-radius: 1rem;
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.subscribe h1,
+.call h1 {
+    font-size: 1.5rem;
+}
+
+.subscribe i,
+.call i {
+    font-size: 1.3rem;
+}
+
+.call:hover {
+    background-color: green;
+    color: var(--white);
+}
+
+.subscribe:hover {
+    background-color: red;
+    color: var(--white);
+}
+
+.last_icon {
+    color: var(--black);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.active .last_icon {
+    color: var(--white);
+}
+
+.last_icon div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3;
+}
+
+.heart i[name="solid"] {
+    display: none;
+}
+
+.click .heart i[name="regular"] {
+    display: none;
+}
+
+.click .heart i[name="solid"] {
+    display: block;
+    color: red;
+}
+
+.sun_moon i[name="moon"] {
+    display: none;
+}
+
+.active .card {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active .sun_moon i[name="moon"] {
+    display: block;
+}
+
+.active .sun_moon i[name="sun"] {
+    display: none;
+}
+
+.active .top_icon {
+    color: var(--white);
+}
+
+.active .profile img {
+    border: 1px solid var(--white);
+}
+
+.call_sub a {
+    text-decoration: none;
+}
+
+@media(max-width:500px) {
+    .card {
+        padding: 0.7rem;
+    }
+
+    .subscribe h1,
+    .call h1 {
+        font-size: 1rem;
+    }
+
+    .last_icon {
+        margin-bottom: 0.5rem;
+    }
+
+    .top_icon {
+        padding: 0.5rem 1rem;
+    }
+
+    .container {
+        background-image: url(img/mbg-img.png);
+        background-size: cover;
+    }
+}
